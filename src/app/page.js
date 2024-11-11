@@ -31,8 +31,8 @@ export default function Home() {
   };
 
   return (
-    <div className="flex justify-center items-center h-screen border-t bg-white p-8">
-      <div className="w-full max-w-4xl overflow-hidden mx-auto h-auto items-center bg-white px-4 py-4 rounded shadow-xl">
+    <div className="flex justify-center items-center  border-t bg-white p-8">
+      <div className="w-full max-w-5xl overflow-hidden mx-auto  items-center bg-white px-4 py-4 rounded shadow-xl">
         {/* MainBox */}
         <div className="grid gap-4 grid-cols-12">
           <div className="grid lg:col-span-4 col-span-12 bg-gray-50 p-5">
