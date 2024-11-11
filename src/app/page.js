@@ -91,7 +91,7 @@ export default function Home() {
 
           <div
             ref={receiptRef}
-            className=" grid lg:col-span-8 col-span-12 p-5 bgImg bg-[#fafbfc10]  border-2"
+            className=" grid lg:col-span-8 col-span-12 p-5 bgImg bg-[#ffffff]  border-2"
           >
             <div className="text-left mb-6 block">
               <h1 className="mb-2 font-semibold ">কলাউজান ইসলামী যুব কাফেলা</h1>
