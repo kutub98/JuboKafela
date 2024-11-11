@@ -102,7 +102,7 @@ export default function Home() {
                 <span>মাসিক বকেয়া পরিশোদ</span>
               </h1>
             </div>
-            <p>জনাব, </p>
+            <p>জনাব,</p>
             <p>
               আসালামুয়ালাইকুম। সম্মানিত সদস্য জনাব{" "}
               <span className="font-bold">{name}</span> আপনার সদস্য নাম্বার{" "}
