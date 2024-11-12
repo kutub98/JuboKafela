@@ -74,7 +74,6 @@ export default function Home() {
               <Input
                 className="px-2 py-2 rounded shadow border border-gray-400 bg-gray-100 text-black"
                 name="serialNo"
-                type="number"
                 required
                 label="সদস্য নং"
                 placeholder="সদস্য নং"
@@ -84,7 +83,6 @@ export default function Home() {
                 className="px-2 py-2 rounded shadow border border-gray-400 bg-gray-100 text-black"
                 name="YearFrom"
                 required
-                type="number"
                 label="সাল থেকে"
                 placeholder="সাল থেকে "
                 onChange={(e) => setYearFrom(e.target.value)}
@@ -92,7 +90,6 @@ export default function Home() {
               <Input
                 className="px-2 py-2 rounded shadow border border-gray-400 bg-gray-100 text-black"
                 name="YearTo"
-                type="number"
                 label="সাল পর্যন্ত"
                 placeholder="সাল পর্যন্ত"
                 onChange={(e) => setYearTo(e.target.value)}
@@ -101,7 +98,6 @@ export default function Home() {
                 className="px-2 py-2 rounded shadow border border-gray-400 bg-gray-100 text-black"
                 name="totalTaka"
                 label="সর্বমোট টাকা"
-                type="number"
                 required
                 placeholder="Total Taka"
                 onChange={(e) => setTotalTaka(e.target.value)}
