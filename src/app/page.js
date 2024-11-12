@@ -29,8 +29,15 @@ export default function Home() {
     try {
       const dataUrl = await toPng(receiptRef.current, {
         quality: 1.0,
-        width: 800,
-        height: 400
+
+        style: {
+          textAlign: "justify", // Justifies text content in the image
+          padding: "20px",
+          fontSize: "18px",
+          fontFamily: "Arial, sans-serif",
+          color: "#333",
+          backgroundColor: "#fff"
+        }
       });
       const link = document.createElement("a");
       link.href = dataUrl;
