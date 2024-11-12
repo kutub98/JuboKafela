@@ -127,7 +127,10 @@ export default function Home() {
               className="grid lg:col-span-8 col-span-12 p-5 bgImg bg-[#ffffff] border-2"
             >
               <div className="text-left mb-6 block">
-                <h1 className="mb-2 font-semibold">
+                <h1 className="mb-3 font-semibold text-center">
+                  بِسْمِ اللَّهِ الرَّحْمَنِ الرَّحِيمِ
+                </h1>
+                <h1 className="my-2 font-semibold">
                   কলাউজান ইসলামী যুব কাফেলা
                 </h1>
                 <h1 className="text-sm mb-2">কলাউজান ইসলামী যুব কাফেলা</h1>
@@ -139,14 +142,14 @@ export default function Home() {
               </div>
               <p>জনাব,</p>
               <p>
-                আসালামুয়ালাইকুম। সম্মানিত সদস্য জনাব{" "}
+                আস-সালামু'আলাইকুম ওয়া রহমাতুল্লাহ। সম্মানিত সদস্য জনাব{" "}
                 <span className="font-bold">{name}</span> আপনার সদস্য নাম্বার{" "}
                 <span className="font-bold">{serialNo}</span> ‍। আপনাকে অতি
                 জরুরী ভাবে জানানো যাচ্ছে যে{" "}
                 <span className="font-bold">যুব কাফেলার</span> বিগত সাধারণ সভার
                 সিদ্ধান্ত অনুসারে আগামী ডিসেম্বর ৩০ তারিখের মধ্যে আপনার বকেয়া{" "}
-                <span className="font-bold">{yearFrom}</span> টু{" "}
-                <span className="font-bold">{yearTo}</span> সর্বমোট{" "}
+                <span className="font-bold">{yearFrom}</span> সাল থেকে{" "}
+                <span className="font-bold">{yearTo}</span> সাল পর্যন্ত সর্বমোট{" "}
                 <span className="font-bold">{totalTaka}</span> টাকা আদায় করিতে
                 হবে।
               </p>
