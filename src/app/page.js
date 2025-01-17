@@ -142,13 +142,13 @@ export default function Home() {
                 {`আস-সালামু'আলাইকুম`} ওয়া রহমাতুল্লাহ। সম্মানিত সদস্য জনাব{" "}
                 <span className="font-bold">{name}</span> আপনার সদস্য নাম্বার{" "}
                 <span className="font-bold">{serialNo}</span> ‍। আপনাকে অতি
-                জরুরী ভাবে জানানো যাচ্ছে যে{" "}
-                <span className="font-bold">যুব কাফেলার</span> বিগত সাধারণ সভার
-                সিদ্ধান্ত অনুসারে আগামী ফেব্রুওয়ারী ২৮ তারিখের মধ্যে আপনার বকেয়া{" "}
-                <span className="font-bold">{yearFrom}</span> সাল থেকে{" "}
+                জরুরী ভাবে জানানো যাচ্ছে যে,
+                <span className="font-bold">যুব কাফেলার</span> বিগত সাধারণ সভায়
+                সবার সিদ্ধান্ত অনুসারে আগামী ফেব্রুওয়ারী ২৮ তারিখের মধ্যে আপনার
+                বকেয়া <span className="font-bold">{yearFrom}</span> সাল থেকে{" "}
                 <span className="font-bold">{yearTo}</span> সাল পর্যন্ত সর্বমোট{" "}
                 <span className="font-bold">{totalTaka}</span> টাকা আদায় করিতে
-                হবে।
+                হইবে।
               </p>
 
               <div className="flex flex-col justify-center">
