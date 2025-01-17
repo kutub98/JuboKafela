@@ -134,7 +134,7 @@ export default function Home() {
                 <h1 className="text-sm mb-2">কলাউজান, লোহাগাড়া, চট্টগ্রাম</h1>
                 <h1 className="text-sm mb-1 font-semibold">
                   <span>বিষয়:</span>
-                  <span>মাসিক বকেয়া পরিশোধ</span>
+                  <span>মাসিক বকেয়া চাদাঁ পরিশোধের জন্য আহ্বান</span>
                 </h1>
               </div>
               <p>জনাব,</p>
