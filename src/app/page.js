@@ -1,6 +1,6 @@
 /* eslint-disable @next/next/no-img-element */
 "use client";
-import Image from "next/image";
+
 import { useState, useRef } from "react";
 import { Button, Input } from "@material-tailwind/react";
 import { toPng } from "html-to-image";
@@ -63,6 +63,11 @@ export default function Home() {
               controlSubmit ? "lg:col-span-4" : "lg:col-span-6 "
             } col-span-12 bg-gray-50 p-5`}
           >
+            <h1 className="my-2 font-semibold">কলাউজান ইসলামী যুব কাফেলা</h1>
+            <div className="text-left mb-6 block">
+              নিচের ফরমে নাম, সদস্য নং, কত সাল থেকে কত সাল পর্যন্ত বকেয়া আছে
+              পূূরণ করে সাবমিট করুন
+            </div>
             <form onSubmit={handleSubmit} className="block space-y-2">
               <Input
                 className="px-2 py-2 rounded shadow border border-gray-400 bg-gray-100 text-black"
@@ -121,87 +126,102 @@ export default function Home() {
           {controlSubmit && (
             <div
               ref={receiptRef}
-              className="grid lg:col-span-8 col-span-12 p-5 bgImg bg-[#ffffff] border-2"
+              className="grid lg:col-span-8 col-span-12 p-5 bgImg bg-[#ffffff] border-2 relative"
             >
-              <div className="text-left mb-6 block">
-                <h1 className="mb-3 font-semibold text-center">
-                  بِسْمِ اللَّهِ الرَّحْمَنِ الرَّحِيمِ
-                </h1>
-                <h1 className="my-2 font-semibold">
+              {/* Watermark */}
+              <div className="absolute inset-0 flex justify-center items-center pointer-events-none">
+                <span className="text-gray-300 hind text-5xl font-bold opacity-20 transform -rotate-45 whitespace-nowrap">
                   কলাউজান ইসলামী যুব কাফেলা
-                </h1>
-                <h1 className="text-sm mb-2">কলাউজান ইসলামী যুব কাফেলা</h1>
-                <h1 className="text-sm mb-2">কলাউজান, লোহাগাড়া, চট্টগ্রাম</h1>
-                <h1 className="text-sm mb-1 font-semibold">
-                  <span>বিষয়:</span>
-                  <span>মাসিক বকেয়া চাদাঁ পরিশোধের জন্য আহ্বান</span>
-                </h1>
+                </span>
               </div>
-              <p>জনাব,</p>
-              <p>
-                {`আস-সালামু'আলাইকুম`} ওয়া রহমাতুল্লাহ। সম্মানিত সদস্য জনাব{" "}
-                <span className="font-bold">{name}</span> আপনার সদস্য নাম্বার{" "}
-                <span className="font-bold">{serialNo}</span> ‍। আপনাকে অতি
-                জরুরী ভাবে জানানো যাচ্ছে যে,
-                <span className="font-bold">যুব কাফেলার</span> বিগত সাধারণ সভায়
-                সবার সিদ্ধান্ত অনুসারে আগামী ফেব্রুওয়ারী ২৮ তারিখের মধ্যে আপনার
-                বকেয়া <span className="font-bold">{yearFrom}</span> সাল থেকে{" "}
-                <span className="font-bold">{yearTo}</span> সাল পর্যন্ত সর্বমোট{" "}
-                <span className="font-bold">{totalTaka}</span> টাকা আদায় করিতে
-                হইবে।
-              </p>
 
-              <div className="flex flex-col justify-center">
-                <div className="flex md:flex-row flex-col justify-between gap-2 my-8">
-                  {/* BANK  */}
-                  <div className=" justify-center gap-2">
-                    <img
-                      alt=" Bank"
-                      className="h-10 w-10 rounded-full "
-                      src="https://upload.wikimedia.org/wikipedia/en/1/12/Logo_of_Islami_Bank_Bangladesh_PLC.png"
-                    />
-                    <h1 className="flex flex-col gap-1">
-                      <span className="font-bold"> Bank: Islami Bank</span>
-                      <span className="font-bold">
-                        Account no: 20501560206788414
-                      </span>
-                      <span className="font-bold">
-                        Title :Kalauzan Islami Jubo Kafela.
-                      </span>
-                      <span className="font-bold"> Branch: lohagra Branch</span>
-                    </h1>
-                  </div>
-                  {/* Bkash, nagagd ,  */}
-                  <div className=" justify-center gap-2">
-                    <div className="flex gap-0">
-                      <img
-                        alt=" Bank"
-                        className="h-10 w-10 rounded-full"
-                        src="https://logos-download.com/wp-content/uploads/2022/01/BKash_Logo_icon.png"
-                      />
+              {/* Receipt Content */}
+              <div className="relative z-10">
+                <div className="text-left mb-6 block">
+                  <h1 className="mb-3 font-semibold text-center">
+                    بِسْمِ اللَّهِ الرَّحْمَنِ الرَّحِيمِ
+                  </h1>
+                  <h1 className="my-2 font-semibold">
+                    কলাউজান ইসলামী যুব কাফেলা
+                  </h1>
+                  <h1 className="text-sm mb-2">কলাউজান ইসলামী যুব কাফেলা</h1>
+                  <h1 className="text-sm mb-2">কলাউজান, লোহাগাড়া, চট্টগ্রাম</h1>
+                  <h1 className="text-sm mb-1 font-semibold">
+                    <span>বিষয়:</span>
+                    <span>মাসিক বকেয়া চাদাঁ পরিশোধের জন্য আহ্বান</span>
+                  </h1>
+                </div>
+                <p>জনাব,</p>
+                <p>
+                  {`আস-সালামু'আলাইকুম`} ওয়া রহমাতুল্লাহ। সম্মানিত সদস্য জনাব{" "}
+                  <span className="font-bold">{name}</span> আপনার সদস্য নাম্বার{" "}
+                  <span className="font-bold">{serialNo}</span> ‍। আপনাকে অতি
+                  জরুরী ভাবে জানানো যাচ্ছে যে,
+                  <span className="font-bold">যুব কাফেলার</span> বিগত সাধারণ
+                  সভায় সবার সিদ্ধান্ত অনুসারে আগামী ফেব্রুওয়ারী ২৮ তারিখের মধ্যে
+                  আপনার বকেয়া <span className="font-bold">{yearFrom}</span> সাল
+                  থেকে <span className="font-bold">{yearTo}</span> সাল পর্যন্ত
+                  সর্বমোট <span className="font-bold">{totalTaka}</span> টাকা
+                  আদায় করিতে হইবে।
+                </p>
+
+                <div className="flex flex-col justify-center">
+                  <div className="flex md:flex-row flex-col justify-between gap-2 my-8">
+                    {/* BANK  */}
+                    <div className=" justify-center gap-2">
                       <img
                         alt=" Bank"
                         className="h-10 w-10 rounded-full "
-                        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSNnBn5UsrdvnY_GLQSw4N64XXxkqxULBwv7AfGFcGQOBOY4Z84WsKaU_XLHx6ajvsqnGY&usqp=CAU"
+                        src="https://upload.wikimedia.org/wikipedia/en/1/12/Logo_of_Islami_Bank_Bangladesh_PLC.png"
                       />
+                      <h1 className="flex flex-col gap-1">
+                        <span className="font-bold"> Bank: Islami Bank</span>
+                        <span className="font-bold">
+                          Account no: 20501560206788414
+                        </span>
+                        <span className="font-bold">
+                          Title :Kalauzan Islami Jubo Kafela.
+                        </span>
+                        <span className="font-bold">
+                          {" "}
+                          Branch: lohagra Branch
+                        </span>
+                      </h1>
                     </div>
+                    {/* Bkash, nagagd ,  */}
+                    <div className=" justify-center gap-2">
+                      <div className="flex gap-0">
+                        <img
+                          alt=" Bank"
+                          className="h-10 w-10 rounded-full"
+                          src="https://logos-download.com/wp-content/uploads/2022/01/BKash_Logo_icon.png"
+                        />
+                        <img
+                          alt=" Bank"
+                          className="h-10 w-10 rounded-full "
+                          src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSNnBn5UsrdvnY_GLQSw4N64XXxkqxULBwv7AfGFcGQOBOY4Z84WsKaU_XLHx6ajvsqnGY&usqp=CAU"
+                        />
+                      </div>
 
-                    <h1 className="flex flex-col gap-1">
-                      <span className="font-bold"> BKash</span>
-                      <span className="font-bold">Mobile no: 01601188696</span>
-                      <span className="font-bold">Kutub Uddin</span>
-                    </h1>
+                      <h1 className="flex flex-col gap-1">
+                        <span className="font-bold"> BKash & Nagad</span>
+                        <span className="font-bold">
+                          Mobile no: 01601188696
+                        </span>
+                        <span className="font-bold">Kutub Uddin</span>
+                      </h1>
+                    </div>
+                  </div>
+                  <div className="text-red-600 bg-white shadow-sm p-2 mx-auto text-sm">
+                    [বি:দ্র: টাকা পেমেন্ট করলে সেটার ছবি বা স্ক্রীনসট দিতে হবে,
+                    টাকা আদায় করার পর অবশ্যই রশিদ সংগ্রহ করে নিবেন]
                   </div>
                 </div>
-                <div className="text-red-600 bg-white shadow-sm p-2 mx-auto text-sm">
-                  [বি:দ্র: টাকা পেমেন্ট করলে সেটার ছবি বা স্ক্রীনসট দিতে হবে,
-                  টাকা আদায় করার পর অবশ্যই রশিদ সংগ্রহ করে নিবেন]
+                <div className="my-4">
+                  <p>নিবেদক</p>
+                  <p>কুতুব উদ্দীন</p>
+                  <p>অর্থ সম্পাদক</p>
                 </div>
-              </div>
-              <div className="my-4">
-                <p>নিবেদক</p>
-                <p>কুতুব উদ্দীন</p>
-                <p>অর্থ সম্পাদক</p>
               </div>
             </div>
           )}

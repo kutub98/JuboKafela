@@ -12,8 +12,12 @@ module.exports = withMT({
       colors: {
         background: "var(--background)",
         foreground: "var(--foreground)"
+      },
+      fontFamily: {
+        hind: ['"Hind Siliguri"', "serif"],
+        space: ['"Space Grotesk"', "sans-serif"]
       }
     }
   },
-  plugins: []
+  plugins: [require("@tailwindcss/typography")]
 });
